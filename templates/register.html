@@ -1,0 +1,59 @@
+{%extends 'base.html'%}
+{%block content %}
+
+<div class="register_page">
+    <div class="container_form">
+        <form action="{{url_for('register_check')}}" method="post" novalidate>
+            {{form.hidden_tag()}}
+            <div>
+                {{form.username.label}}
+                {{form.username()}}
+                <br/>
+                {% for error in form.username.errors %}
+                <strong>{{error}}</strong>
+                {%endfor%}
+
+            </div>
+
+            
+            <div>
+                {{form.email.label}}
+                {{form.email()}}
+                <br/>
+                {% for error in form.email.errors %}
+                <strong>{{error}}</strong>
+                {%endfor%}
+
+            </div>
+
+            <div>
+                {{form.password.label}}
+                {{form.password()}}  
+                <br/>
+                {% for error in form.password.errors %}
+                <strong>{{error}}</strong>
+                {%endfor%}
+            </div>
+
+            <div>
+                {{form.comfirm_password.label}}
+                {{form.comfirm_password()}}
+                <br/>
+                {% for error in form.comfirm_password.errors %}
+                <strong>{{error}}</strong>
+                {%endfor%}
+            </div>
+
+            <div>
+                {{ form.submit() }}
+            </div>
+
+            
+            
+            
+            </form>
+    </div>
+</div>
+
+
+{%endblock%}    

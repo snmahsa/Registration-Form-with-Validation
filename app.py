@@ -19,8 +19,6 @@ def register_check():
         return redirect(url_for('home'))
     return render_template('register.html', form=form)
 
-
-
 @app.route('/home')
 def home():
     return "HELLO"

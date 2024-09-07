@@ -23,16 +23,16 @@ flask_project/
 ## Features
 
 Form Validation:
-
-    Username: Must be at least 3 characters long.
-    Email: Must be a valid email address.
-    Password: Must be at least 8 characters long.
-    Confirm Password: Must match the password.
+  
+* Username: Must be at least 3 characters long.
+* Email: Must be a valid email address.
+* Password: Must be at least 8 characters long.
+* Confirm Password: Must match the password.
 
 
 CSRF Protection: 
 
-    The form includes CSRF protection for security.    
+* The form includes CSRF protection for security.    
 
 
 

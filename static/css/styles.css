@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+.index_page , .register_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container_index , .container_form{
+    background-color: teal;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container_index a{
+    font-size: 28px;
+    text-decoration: none;
+    color: white;
+}
+
+.container_index a:hover{
+    color: mediumvioletred;
+}
+
+.container_form{
+    background-color: teal;
+    width: 50%;
+    height: 60%;
+    text-align: center;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.register_page .container_form div{
+    margin-bottom: 20px;
+}
+
+.register_page .container_form label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.register_page .container_form input{
+    border-radius: 5px;
+    height: 20px;
+}
+
+.register_page .container_form input[type='submit']{
+    background-color:chocolate ;
+    padding:5px 10px;
+    text-align: center;
+    line-height: 0.7;
+
+}

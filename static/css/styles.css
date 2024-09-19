@@ -4,7 +4,7 @@
 
 }
 
-.index_page , .register_page{
+.index_page , .register_page, .home_page{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,3 +65,17 @@
     line-height: 0.7;
 
 }
+
+.head_home{
+    background-color: rgb(5, 107, 10);
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-weight: bolder;
+}
+

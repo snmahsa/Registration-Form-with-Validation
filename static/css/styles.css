@@ -4,7 +4,7 @@
 
 }
 
-.index_page , .register_page, .home_page{
+.index_page , .register_page, .home_page, .error_page{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,4 +78,6 @@
     color: aliceblue;
     font-weight: bolder;
 }
-
+.container_container{
+    
+}

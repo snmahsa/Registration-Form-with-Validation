@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, url_for, render_template
+from flask import Flask, request, redirect, url_for, render_template,flash
 from forms import RegistrationForm
 app = Flask (__name__)
 app.secret_key = '1234$' 
@@ -25,8 +25,9 @@ def register_check():
 
 @app.route('/home')
 def home():
+    flash("Welcome",'success')
     username = request.args.get('username')
-    return f"Hello{username}"
+    return render_template('home.html',username=username)
 
 if __name__ == '__main__':
     app.run(debug = True)

@@ -20,7 +20,7 @@ def register_check():
         email = form.email.data
         password = form.password.data
         comfirm_password = form.comfirm_password.data
-        return redirect(url_for('home', , username= username))
+        return redirect(url_for('home',  username= username))
     return render_template('register.html', form=form)
 
 @app.route('/home')

@@ -29,5 +29,21 @@ def home():
     username = request.args.get('username')
     return render_template('home.html',username=username)
 
+@app.errorhandler(Exception)
+def page_not_found(e):
+    if hasattr(e, 'code'):
+        status_code = e.code
+        error_message = {
+            400: "Bad request.",
+            401: "Authorization required.",
+            403: "Access to this resource is forbidden.",
+            404: "Ops! Page not found.",
+            500: "An internal server error has occurred."
+        }.get(status_code, "An unexpected error has occurred.")
+    else:
+        status_code = 500
+        error_message = "An unexpected error has occurred."
+    return render_template('error.html', error_message=error_message,status_code=e.code)
+
 if __name__ == '__main__':
     app.run(debug = True)
